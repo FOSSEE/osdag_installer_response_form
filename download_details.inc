@@ -5,10 +5,11 @@ function view_responses_all()
 	$query = db_select('installer_response');
 	$query->fields('installer_response');
 	$result = $query->execute();
+	$i = 1;
 	while ($row = $result->fetchObject())
 		{
 			$preference_rows[] = array(
-				$row->id,
+				$i,
 				$row->name_title."."." ".$row->first_name." ".$row->last_name,
 				//$row->first_name,
 				//$row->last_name,
@@ -17,9 +18,10 @@ function view_responses_all()
 				$row->designation,
 				//$row->insatller_type
 			);
+			$i++;
 		} //$row = $result->fetchObject()
 		$preference_header = array(
-			'S.No',
+			'S.No',			
 			'Name',
 			'Institute',
 			'Email_ID',
