@@ -386,6 +386,9 @@ function data_submission_form_submit($form, &$form_state, $no_js_use = FALSE){
       header("Content-Transfer-Encoding: Binary");
       header('Expires: 0');
       header('Pragma: no-cache');
+      header("Location: https://osdag.fossee.in/resources/downloads");
+      //location.href = "http://localhost/osdag_fossee_in_2015/resources/downloads";
+      //include('');
       //ob_end_flush();
       ob_clean();
       flush();
@@ -461,6 +464,8 @@ function skip_download_osdag_installer()
       header("Content-Transfer-Encoding: Binary");
       header('Expires: 0');
       header('Pragma: no-cache');
+      header("Location: https://osdag.fossee.in/resources/downloads");
+      //location.href = "http://localhost/osdag_fossee_in_2015/resources/downloads";
       //ob_end_flush();
       ob_clean();
       flush();
@@ -495,6 +500,7 @@ function download_osdag_instructions_file()
       header("Content-Transfer-Encoding: Binary");
       header('Expires: 0');
       header('Pragma: no-cache');
+      header("Location: https://osdag.fossee.in/resources/downloads");
       //ob_end_flush();
       ob_clean();
       flush();
